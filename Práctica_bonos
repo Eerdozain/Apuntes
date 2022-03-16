@@ -1,0 +1,39 @@
+
+!pip install numpy-financial
+
+import numpy_financial as npf
+
+#datos de los bonos
+
+bonoA = [-96,100,0,0,0,0]
+bonoB = [-545,50,550,0,0,0]
+bonoC = [-1030,70,70,1070,0,0]
+bonoD = [-2030,150,150,150,2150,0]
+bonoE = [-3920,300,300,300,300,4300]
+
+
+bonoX = [0,100,100,100,100,1100]
+
+precioA = -bonoA[0]
+precioB = -bonoB[0]
+precioC = -bonoC[0]
+precioD = -bonoD[0]
+precioE = -bonoE[0]
+
+#calculamos la TIR de los bonos
+tirA = npf.irr(bonoA)
+tirB = npf.irr(bonoB)
+tirC = npf.irr(bonoC)
+tirD = npf.irr(bonoD)
+tirE = npf.irr(bonoE)
+
+#comprobamos el cálculo
+print(tirA)
+print(tirB)
+print(tirC)
+print(tirD)
+print(tirE)
+
+
+#Calculo de la etti
+
